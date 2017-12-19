@@ -1,7 +1,10 @@
 package com.yalunwang.autowiring.config;
 
-/**
- * Created by lili on 2017/12/17.
- */
+
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@ComponentScan(basePackages = "com.yalunwang.autowiring")
 public class PeopleCarConfig {
 }

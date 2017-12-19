@@ -1,7 +1,9 @@
 package com.yalunwang.autowiring;
 
 /**
- * Created by lili on 2017/12/17.
+ * author yalunwang
+ * 车抽象接口
  */
 public interface Car {
+    void notice();
 }

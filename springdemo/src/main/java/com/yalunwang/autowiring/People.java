@@ -1,7 +1,9 @@
 package com.yalunwang.autowiring;
 
 /**
- * Created by lili on 2017/12/17.
+ * author yalunwang
+ * 人类抽象接口
  */
 public interface People {
+    void drive();
 }

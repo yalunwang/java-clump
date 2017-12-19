@@ -6,4 +6,5 @@ package com.yalunwang.xmlconfig;
  */
 public interface People {
     void drive();
+    void printCertificateList();
 }

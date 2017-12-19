@@ -3,4 +3,28 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+       <bean id="busCar" class="com.yalunwang.xmlconfig.BusCar" >
+              <constructor-arg name="carName" value="浦东2路"></constructor-arg>
+              <constructor-arg name="stationList">
+                     <list>
+                            <value>高科中路</value>
+                            <value>宜山路</value>
+                            <value>桂林路</value>
+                     </list>
+              </constructor-arg>
+       </bean>
+       <!--<bean id="man" class="com.yalunwang.xmlconfig.Man" >-->
+              <!--<constructor-arg name="car" ref="busCar"/>-->
+       <!--</bean>-->
+       <bean id="woman" class="com.yalunwang.xmlconfig.Woman" >
+              <property name="car" ref="busCar"/>
+              <property name="userName" value="韩梅梅"></property>
+              <property name="certificateList" >
+                     <list>
+                            <value>驾驶证</value>
+                            <value>身份证</value>
+                     </list>
+              </property>
+       </bean>
+
 </beans>

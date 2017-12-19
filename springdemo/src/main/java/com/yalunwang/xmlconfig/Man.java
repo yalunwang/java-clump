@@ -1,6 +1,6 @@
 package com.yalunwang.xmlconfig;
 
-import com.yalunwang.javaconfig.Car;
+
 
 /**
  * author yalunwang
@@ -9,13 +9,13 @@ import com.yalunwang.javaconfig.Car;
 
 public class Man implements People {
     public Man () {
-        System.out.println("我是man构造函数");
+
     }
 
     private String userName ="小明";
 
-    private com.yalunwang.javaconfig.Car car;
-    public Man( Car car)
+    private Car car;
+    public Man(Car car)
     {
         this.car=car;
     }
@@ -26,5 +26,10 @@ public class Man implements People {
         //System.out.println("driver：");
         System.out.println("男司机:" + this.userName);
         car.notice();
+    }
+
+    @Override
+    public void printCertificateList() {
+
     }
 }

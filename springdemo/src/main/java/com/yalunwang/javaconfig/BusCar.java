@@ -6,8 +6,13 @@ import org.springframework.stereotype.Component;
  * author yalunwang
  * 公交车
  */
-@Component("busCar")
+
 public class BusCar implements Car {
+
+    public BusCar(){
+        System.out.println("buscar构造函数");
+    }
+
     private String carName="浦东25路";
 
     @Override

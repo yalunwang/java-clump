@@ -5,5 +5,7 @@ package com.yalunwang.xmlconfig;
  * 车抽象接口
  */
 public interface Car {
+
     void notice();
+    void printStationList();
 }

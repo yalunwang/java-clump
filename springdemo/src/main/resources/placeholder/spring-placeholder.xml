@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+       <!-- 读取属性文件 -->
+       <context:property-placeholder ignore-unresolvable="true" local-override="true" location="classpath:placeholder/car.properties" />
+       <bean id="Car" class="com.yalunwang.placeholder.Car" >
+              <property name="name" value="${car.name}" />
+              <property name="width" value="${car.width}" />
+              <property name="length" value="${car.length}" />
+       </bean>
+
+       <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+              <property name="location">
+                     <value>placeholder/car.properties</value>
+              </property>
+              <property name="fileEncoding">
+                     <value>UTF-8</value>
+              </property>
+       </bean>
+
+</beans>
